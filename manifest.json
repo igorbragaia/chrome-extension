@@ -1,0 +1,18 @@
+{
+  "name": "Facebook status and comments: Speech to Text",
+  "description": "send text messages through audio recording",
+  "version": "2.0",
+  "permissions": ["activeTab","http://*/*","https://*/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["script.js"]
+  }],
+  "browser_action": {
+    "default_title": "Make this page red"
+  },
+  "manifest_version": 2
+}
